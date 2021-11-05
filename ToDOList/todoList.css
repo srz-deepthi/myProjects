@@ -1,0 +1,83 @@
+
+body{
+    background-color: rgb(167, 45, 45);
+}
+header{
+    background-color: rgb(105, 8, 8);
+    
+}
+h1{
+    color: whitesmoke;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+input{  
+    width: 80%;
+    height: 40px;
+    min-width: 30%;
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-left: 20px; 
+}
+.btn{
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-top: -10px;
+    border-radius: 12px;
+    background-color:whitesmoke;
+    border: rgb(105, 8, 8) solid 1px;
+    box-shadow:3px 3px;
+
+}
+
+@media screen and (max-width: 600px) {
+    input{
+        width: 95%;
+        margin-left: 9px; 
+    }
+    .btn{
+        width: 30%;
+        margin-left: 35%;
+        background-color: rgb(226, 129, 84);
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+ul li {
+    border: 1px solid #ddd;
+    background-color: #7c3333;
+    height: 40px;
+    width: 70%;
+    font-size: 18px;
+    color: black;
+    margin-top: 5px;
+    margin-left: 11%;
+    padding-left:20px;
+    padding-top: 5px;
+}
+ul li:hover {
+    background-color: #eee;
+}
+.close{
+    padding-right: 10px;
+} 
+.close:hover{
+    background-color:#7c3333 ;
+    padding-top:-10px;
+    padding-bottom: 5px;
+    padding-left: 1%;
+    border-radius: 10px;
+    border: rgb(105, 8, 8) solid 2px;
+}
+footer{
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+
