@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(9, 80, 65);
+}
+header{
+    background-color: rgb(62, 104, 81);    
+}
+h1{
+    color: whitesmoke;
+    padding: 30px;
+    margin-top: 0%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+#btn1{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(12, 136, 84);
+    border: rgb(12, 136, 84) solid;
+}
+.modal-content{
+    background-color: whitesmoke;
+    color: rgb(57, 126, 103);
+}
+#btn2{
+    background-color: rgb(57, 126, 105);
+    color: whitesmoke;
+}
+footer{
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
