@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  #div2 button,#m,#x,#p,#e{
+    color:orangered;
+  }
+  #f{
+    height: 30%;
+    width: 30%;
+    font-size: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    border: solid rgb(41, 39, 39) 2px;
+    margin-top: 5%;
+    margin-left: 30%;
+    padding: 15px;
+    background-color: rgb(41, 39, 39);
+  }
+  @media only screen and (min-width: 1024px) {
+
+    #div1{
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0%;
+    }
+    #result{
+      margin: 20px;
+      margin-left: 80px;
+      padding-left: 375px;
+      padding-right: 300px;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    #div1{
+      width: 100%;
+      margin-right: 0%;
+    }
+    #result{
+      padding-right: 300px;
+    }
+    .row{
+      width: fit-content;
+    }
+    #f{
+      width: 100%;
+      margin: 0%;
+    
+    }
+    button{
+      width: 50%;
+
+    }
+    #div1{
+      padding-left: 30px;
+      width: 100%;
+    }
+    button{
+      align-items: center;
+      margin: 10px;
+    }
+    input{
+      width: 100%;
+    }
+  }
+  @media screen and (max-width:600px) {
+    .row{
+      width: fit-content;
+    }
+    #f{
+      width: 100%;
+      margin: 0%;
+    
+    }
+    button{
+      width: 50%;
+
+    }
+    #div1{
+      padding-left: 30px;
+      width: 100%;
+    }
+    button{
+      align-items: center;
+      margin: 10px;
+    }
+    input{
+      width: 100%;
+    }
+  }
+
+  div{
+    text-align: center;
+  }
+  button{
+    width:20%;
+    height: max-content;
+    font-size: 21px;
+    font-weight: bolder;
+    border: 0px solid;
+    text-align: center;
+    cursor: pointer;
+    margin: 3px 2px;
+    padding: 20px;
+    background-color:rgb(41, 39, 39);
+    color: whitesmoke;
+  }
+
+  input{
+    width: 100%;
+    height: 90px;
+    font-size:35px;
+    font-weight: bolder;
+    color: darkblue;
+    max-width: fit-content;
+  }
+  footer{
+    color: honeydew;
+  }
