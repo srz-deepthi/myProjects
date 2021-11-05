@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Infromation Portal
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+                rel="stylesheet" 
+                integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+                crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+                crossorigin="anonymous">
+        </script>
+        
+        <style>
+            header{
+                background-color:#096b63;
+                height: 100px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                
+            }
+            h1{
+                padding: 20px;
+                color: white;
+
+            }
+            #bCancel{
+                background-color: slateblue;
+            }
+            .row{
+                padding: 15px;
+                border: 10px;
+
+            }
+            button{
+                margin: 10px;
+                align-items: center;
+                min-width: 80px;
+            }
+            body{
+                background-color:#22313f;
+            }
+            label,select{
+                color:white;
+                font-family:monospace;
+                font-style:bold;
+            }
+            input,option,select{
+                color: black;
+                
+            }  
+            h6{
+                color: white;
+                font-family: 'Courier New', Courier, monospace;
+                text-align: center;
+                font-weight:100;
+                font-size: 15px;
+            }          
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Information Portal</h1>
+        </header>
+        <form name="myform" target="_blank">
+            <div class="form_group row">
+                <label for="name" class="col-sm-2">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" id="name" required>
+                </div>
+            </div>
+            <div class="form_group row">
+                <label for="age" class="col-sm-2">Age</label>
+                <div class="col-sm-10">
+                    <input type="number" id="age">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="g" class="col-sm-2">Gender</label>
+                <div class="col-sm-4">
+                    <select id="g" onchange="gFun()">
+                        <option></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="transmen">Transmen</option>
+                        <option value="transwomen">Transwomen</option>
+                        <option value="non-binary">Non-binary</option>
+                        <option value="intersex">Intersex</option>
+                        <option value="type" id="self">Let me type</option>
+                        <option value="none">I prefer not to say</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row" style="display:none;" id="hs">
+                <div class="col col-sm-2">
+                    <label for="cgender">Type your gender</label>
+                </div>
+                <div class="col col-sm-10">
+                    <input type="text" id="cgender" name="cg">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="pname" class="col-sm-2">Parent's Name</label>
+                <div class="col-sm-10">
+                    <input type="text" id="pname">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2" for="occ">Occupation</label>
+                <div class="col-sm-10">
+                    <input type="text" id="occ">
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="form-group row">
+                    <button type="submit" onclick="return sFun()" class="col-sm-1 btn btn-primary">Submit</button>
+                    <button type="reset"  value="reset" class="col-sm-1 btn btn-secondary" id="b1">Reset</button>
+                    <button value="cancel" onclick="return cFun()" class="col-sm-1 btn" id="bCancel" style="color: white;">Cancel</button>
+                    <!--window.location.reload()-->
+                </div>
+            </div>
+        </form>
+        <b id="effect"></b>
+        <hr>
+        <h6>
+            copyright©2021.All Rights Reserved.
+        </h6> 
+        <!----------------js------------------------------------->
+        <script type="text/javascript">
+            function gFun() {
+                if(document.getElementById("g").value=="type")
+                {
+                    hs.style.display="block";                   
+                }
+            }
+            function sFun() {
+                var name=document.getElementById("name").value;
+                var age=document.getElementById("age").value;
+                var gen=document.getElementById("g").value;
+                var gender=(document.getElementById("g").value=="type")? 
+                            document.getElementById("cgender").value : document.getElementById("g").value;
+                var pname=document.getElementById("pname").value;
+                var occ=document.getElementById("occ").value;
+                /*----------------------------------------------------------*/
+                if (name=="" || name==null){  
+                    alert("Name can't be blank");  
+                    return false;  
+                }
+                else if(age<1 || age=="" || age>150){
+                    alert("Please enter a valid age");
+                    return false;
+                }
+                else if(pname=="" || pname==null){
+                    alert("Please enter your parent's name");
+                    return false;
+                }
+                else if(!isNaN(pname)){
+                    alert("kindly enter proper parent's name");
+                    return false;
+                }
+                else if(occ==""){
+                    alert("please enter your occupation");
+                    return false;
+                }
+                else if(!isNaN(occ)){
+                    alert("Please enter a valid Occupation");
+                    return false;
+                }
+                if(gen=="type")
+                {
+                    if(gen==""||!isNaN(gender))
+                    {
+                        alert("please enter correct type");
+                        return false;
+                    }
+                }
+                
+                /*----------------------------------------------------------*/
+                    localStorage.setItem("name",name);
+                    localStorage.setItem("age",age);
+                    localStorage.setItem("gender",gender);
+                    localStorage.setItem("pname",pname);
+                    localStorage.setItem("occ",occ);
+                window.location.replace("info.html");         
+            }
+            function cFun() {
+                return false;
+            }
+        </script>
+    </body>    
+</html>     

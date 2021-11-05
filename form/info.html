@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+                rel="stylesheet" 
+                integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+                crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+                crossorigin="anonymous">
+        </script>
+
+        <script type="text/javascript">
+         window.onload = function fill() {
+             document.getElementById("nm").innerText=localStorage.getItem("name");
+             document.getElementById("ag").innerText=localStorage.getItem("age");
+             document.getElementById("gn").innerText=localStorage.getItem("gender");
+             document.getElementById("pn").innerText=localStorage.getItem("pname");
+             document.getElementById("oc").innerText=localStorage.getItem("occ");
+
+         }
+        </script>
+        <style>
+            body{
+                background-color: #096b63;
+                /*background-color:#94618e;*/
+            }
+            header{
+                background-color: #22313f;
+                /*background-color: #49274a;*/
+                font-family: 'Courier New', Courier, monospace;
+                height: 100px;
+                padding:30px;
+                color:white;
+            }
+            .row{
+                font-family: 'Courier New', Courier, monospace;
+                color: white;
+                font-size:20px;
+                padding-top: 10px;
+                padding-left: 30px;
+                /*border: lightgoldenrodyellow solid 0.5px;*/
+            }
+            label{
+                font-weight:bolder;
+                flex-wrap: wrap;
+            }  
+            h4{
+                float: right;
+            } 
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+            }
+            
+            li {
+              float: left;
+            }
+            #lside{
+                padding: 10px;
+                float: right;
+            }  
+            li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            } li a:hover{
+                color:darkcyan;
+            }       
+        </style>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><h1>Personal Information</h1></li>
+                <li id="lside"><h4><a href="form_ass1_js.html">Home</a></h4></li>
+            </ul>
+        </header>
+            <div class="row">
+                <div class="col col-lg-4">
+                    <label for="nm">Name</label>
+                </div>
+                <div class="col col-sm-8" id="nm"></div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4">
+                    <label for="ag">Age</label>
+                </div>
+                <div class="col col-sm-8" id="ag"></div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4">
+                    <label for="gn">Gender</label>
+                </div>
+                <div class="col col-sm-8" id="gn"></div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4">
+                    <label for="pn">Parent's Name</label>
+                </div>
+                <div class="col col-sm-8" id="pn"></div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4">
+                    <label for="oc">Occupation</label>
+                </div>
+                <div class="col col-sm-8" id="oc"></div> 
+            </div>
+            <hr>
+    </body>
+</html>
